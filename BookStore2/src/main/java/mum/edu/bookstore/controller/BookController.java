@@ -24,9 +24,9 @@ public class BookController {
 	@Autowired
 	BookService bookService;
 
-	@RequestMapping("/book")
-	public String getBookByTitle(String title, Model model) {
-		Book book = bookService.findBookById(1);
+	@RequestMapping(value="/searchBook", method=RequestMethod.GET)
+	public String getBookByTitle(@RequestParam("searchItem") String title, Model model) {
+		Book book = bookService.findBookByTitle(title);
 		model.addAttribute("book", book);
 		return "book";
 	}

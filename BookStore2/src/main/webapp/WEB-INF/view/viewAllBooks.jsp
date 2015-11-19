@@ -5,18 +5,24 @@
 <html>
 <head>
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="well"
 		style="width: 600px; margin-left: auto; margin-right: auto">
-		<a href="addBook"><button type="button"
-							class="btn btn-primary">Add Book</button></a> <br />
+		<form class="navbar-form navbar-left" action="searchBook" method="get">
+			<div class="form-group">
+				<input type="text" name="searchItem" class="form-control" >
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		<a href="addBook"><button type="button" class="btn btn-primary">Add
+				Book</button></a> <br />
 		<hr />
-		<a href="doLogout"><button type="button"
-							class="btn btn-warning">Log Out</button></a> <br />
+		<a href="doLogout"><button type="button" class="btn btn-warning">Log
+				Out</button></a> <br />
 		<hr />
 		<div class="well">
 			<c:forEach var="book" items="${books}">
