@@ -1,4 +1,4 @@
-package mum.edu.bookstore.repository;
+package edu.mum.bookstore.repository;
 
 
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import mum.edu.bookstore.domain.Author;
-import mum.edu.bookstore.domain.Book;
+import edu.mum.bookstore.domain.Author;
+import edu.mum.bookstore.domain.Book;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long>{

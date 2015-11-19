@@ -1,4 +1,4 @@
-package mum.edu.bookstore.controller;
+package edu.mum.bookstore.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

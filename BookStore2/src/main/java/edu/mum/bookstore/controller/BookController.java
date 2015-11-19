@@ -1,4 +1,4 @@
-package mum.edu.bookstore.controller;
+package edu.mum.bookstore.controller;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import mum.edu.bookstore.domain.Author;
-import mum.edu.bookstore.domain.Book;
-import mum.edu.bookstore.service.BookService;
+import edu.mum.bookstore.domain.Author;
+import edu.mum.bookstore.domain.Book;
+import edu.mum.bookstore.service.BookService;
 
 @Controller
 public class BookController {
@@ -24,7 +24,7 @@ public class BookController {
 	@Autowired
 	BookService bookService;
 
-	@RequestMapping(value="/searchBook", method=RequestMethod.GET)
+	@RequestMapping(value = "/searchBook", method = RequestMethod.GET)
 	public String getBookByTitle(@RequestParam("searchItem") String title, Model model) {
 		Book book = bookService.findBookByTitle(title);
 		model.addAttribute("book", book);
@@ -76,7 +76,7 @@ public class BookController {
 	@RequestMapping("/findBook")
 	public String findBookByGenre(@ModelAttribute("genre") String genre, Model model) {
 		List<Book> bookByGenre = bookService.findBookByGenre(genre);
-		model.addAttribute("books",bookByGenre);
+		model.addAttribute("books", bookByGenre);
 		return "viewAllBooks";
 	}
 }

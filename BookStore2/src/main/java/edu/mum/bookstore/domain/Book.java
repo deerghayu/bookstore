@@ -1,4 +1,4 @@
-package mum.edu.bookstore.domain;
+package edu.mum.bookstore.domain;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

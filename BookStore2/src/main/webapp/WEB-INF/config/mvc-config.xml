@@ -12,13 +12,13 @@
       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
       http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	<context:component-scan base-package="mum.edu.bookstore" />
+	<context:component-scan base-package="edu.mum.bookstore" />
 	<mvc:annotation-driven />
-	<jpa:repositories base-package="mum.edu.bookstore.repository" />
+	<jpa:repositories base-package="edu.mum.bookstore.repository" />
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="mum.edu.bookstore.domain" />
+		<property name="packagesToScan" value="edu.mum.bookstore.domain" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>

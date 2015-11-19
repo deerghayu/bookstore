@@ -16,7 +16,7 @@
 			<div class="form-group">
 				<input type="text" name="searchItem" class="form-control" >
 			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="submit" class="btn btn-default">Search Book</button>
 		</form>
 		<a href="addBook"><button type="button" class="btn btn-primary">Add
 				Book</button></a> <br />

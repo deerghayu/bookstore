@@ -1,13 +1,13 @@
-package mum.edu.bookstore.service;
+package edu.mum.bookstore.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import mum.edu.bookstore.domain.Author;
-import mum.edu.bookstore.domain.Book;
-import mum.edu.bookstore.repository.BookRepository;
+import edu.mum.bookstore.domain.Author;
+import edu.mum.bookstore.domain.Book;
+import edu.mum.bookstore.repository.BookRepository;
 
 @Service
 public class BookService {
